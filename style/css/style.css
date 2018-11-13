@@ -1,0 +1,32 @@
+html, body {
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  height: 60px;
+}
+
+.wrapper {
+  margin: auto;
+  width: 950px;
+  height: 70%;
+  background-color: aquamarine;
+}
+
+.picture {
+  width: 300px;
+  height: 300px;
+  background-color: peru;
+  margin: auto;
+}
+
+.button {
+  width: 200px;
+  height: 30px;
+  margin: 15px auto;
+  background-color: blue;
+  color: white;
+}
+
+/*# sourceMappingURL=style/css/style.css.map */
