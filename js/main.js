@@ -1,33 +1,61 @@
 const girls = [
   {
-  name: 'Bel',
-  picture: './img/logo_sombra_bi.svg'
+  name: 'Agos',
+  picture: './img/girls/Agos.png'
   },
   {
-  name: 'Bel2',
-  picture: './img/logo_sombra_bi.svg'
+  name: 'Agus',
+  picture: './img/girls/agus.png'
   },
   {
-  name: 'Bel3',
-  picture: './img/logo_sombra_bi.svg'
+  name: 'Aldi L.',
+  picture: './img/girls/aldiL.png'
   },
   {
-  name: 'Bel4',
-  picture: './img/logo_sombra_bi.svg'
+  name: 'Bere',
+  picture: './img/girls/Bere.png'
   },
   {
-  name: 'Bel5',
-  picture: './img/logo_sombra_bi.svg'
-  },  
+  name: 'Cecilia',
+  picture: './img/girls/cecilia.png'
+  },
+  {
+  name: 'Euge',
+  picture: './img/girls/euge.png'
+  },
+  {
+  name: 'Flor',
+  picture: './img/girls/Flor.png'
+  },
+  {
+  name: 'Grace',
+  picture: './img/girls/grace.png'
+  },
+  {
+  name: 'Maite',
+  picture: './img/girls/Maite.png'
+  },
+  {
+  name: 'Maqui',
+  picture: './img/girls/Maqui.png'
+  },
+  {
+  name: 'Marce',
+  picture: './img/girls/Marce.png'
+  },
+  {
+  name: 'Marianela',
+  picture: './img/girls/marianela.png'
+  },
+
 ]
 
 let turno = 0;
+let matches = 0;
 let array = [];
 const numberOfGirls = girls.length
 const position = shufflePositions(array, numberOfGirls)
-console.log(position)
 const girlsShuffled = setCards(girls, position)
-console.log(girlsShuffled)
 
 function shufflePositions(array, number) {
   let random = Math.floor(Math.random() * number);
@@ -50,7 +78,7 @@ function setCards (arr, masterArr) {
 
 function generateOptions (index, maxNumber, total) {
  let arr = []
- arr.push(girls[index].name)
+ arr.push(girlsShuffled[index].name)
  let shuffle = []
  while (arr.length < maxNumber) {
    let random = Math.floor(Math.random() * total)
@@ -58,16 +86,12 @@ function generateOptions (index, maxNumber, total) {
      arr.push(girls[random].name)
    }
  }
- console.log('asi queda el array original dps de creado', arr)
  const position = shufflePositions(shuffle, maxNumber)
- console.log('estas son las posiciones shuffleadas',position)
  const optionPosition = setCards(arr, position)
- console.log('este es el array shuffleado', optionPosition)
  return optionPosition
 }
 
 let currentNames = generateOptions(turno, 3, girls.length)
-console.log('soy', currentNames)
 
 $(window).on('load', function() {
   $('#picture').attr('src', girlsShuffled[turno].picture);
@@ -80,30 +104,24 @@ function updateCard() {
   $('#container').append(cards[i]['front'].clone());
 }
 
-function isMatch() {
-  
-}
-console.log('soy shuffled', girlsShuffled)
 $('.button').on('click', function () {
-  console.log($(this).index())
   const index = $(this).index();
   if (currentNames[index] === girlsShuffled[turno].name) {
-    console.log('yey');
+    turno++;
+    $('#turno').html(turno)
+    $(this).addClass('match')
+    $('#message').html('¡Bien, acertaste!')
+    setTimeout(function() {
+      $(this).removeClass('match')
+      $('#picture').attr('src', girlsShuffled[turno].picture);
+      let currentNames = generateOptions(turno, 3, girls.length)
+      $('.button').each(function (i) {
+        $(this).html(currentNames[i]) 
+      })
+    }, 1000);
   } else {
-    console.log('nooo')
+    setTimeout(function() {
+      
+    }, 2000);
   }
 });
-
-// necesito desordenar el array y mostrar una sola por vez
-/*
-cuando alguien clickea el boton
-checkeo si matchea el nombre con el de la foto
-  si matchea marco verde y sumo un punto
-  si no matchea marco rojo 
-  y voy a otra imagen
-
-  después de x cantiudad de clicks
-  le doy un puntaje 
-  y jugar otra vez
-
- */
