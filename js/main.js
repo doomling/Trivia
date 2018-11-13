@@ -104,11 +104,13 @@ function updateCard() {
   $('#container').append(cards[i]['front'].clone());
 }
 
+// delegating the event to body so I can repeat
 $(document).on('click', '.button', function (event) {
   
-  const index = $(event.target).index();
+  const clicked = this;  
+  const index = $(clicked).index();
+
   if (currentNames[index] === girlsShuffled[turno].name) {
-    const clicked = this;
     setTimeout(function() {
       $('#turno').html(turno)
       $(clicked).addClass('match')
@@ -117,18 +119,20 @@ $(document).on('click', '.button', function (event) {
     }, 500);
 
     setTimeout(function() {
+      turno++;
+      let currentNames = generateOptions(turno, 3, girls.length)
       $(clicked).removeClass('match')
       $('#message').html('')
       $('#picture').attr('src', girlsShuffled[turno].picture);
-      let currentNames = generateOptions(turno, 3, girls.length)
       $('.button').each(function (i) {
         $(this).html(currentNames[i]) 
       })
-    }, 1000);
+    }, 700);
+
   } else {
     setTimeout(function() {
     }, 2000);
   }
-  turno++;
+  console.log(clicked)
   console.log(girlsShuffled[turno].name)
 });
