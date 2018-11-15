@@ -102,4 +102,13 @@ nav h1 {
   display: none;
 }
 
+#reload {
+  color: #bf396a;
+  cursor: pointer;
+}
+
+#reload:hover {
+  color: #ea6495;
+}
+
 /*# sourceMappingURL=style/css/style.css.map */

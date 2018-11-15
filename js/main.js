@@ -186,3 +186,7 @@ function checkTurns (turns, girls, matches) {
     $('#final').html(matches)
   }
 }
+
+$('#reload').click(function() {
+  location.reload();
+});
