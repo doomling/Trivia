@@ -47,7 +47,50 @@ const girls = [
   name: 'Marianela',
   picture: './img/girls/marianela.png'
   },
-
+  {
+  name: 'Meli',
+  picture: './img/girls/Meli.png'
+  },
+  {
+  name: 'Mica',
+  picture: './img/girls/Mica.png'
+  },
+  {
+  name: 'Michelle',
+  picture: './img/girls/Michelle.png'
+  },
+  {
+  name: 'Natalia',
+  picture: './img/girls/Natalia.png'
+  },
+  {
+  name: 'Noelia',
+  picture: './img/girls/Noelia.png'
+  },
+  {
+  name: 'Rocio',
+  picture: './img/girls/Rocio.png'
+  },
+  {
+  name: 'Rossita',
+  picture: './img/girls/Rossita.png'
+  },
+  {
+  name: 'Sofía',
+  picture: './img/girls/Sofia.png'
+  },
+  {
+  name: 'Vicky',
+  picture: './img/girls/Vicky.png'
+  },
+  {
+  name: 'Vonnie',
+  picture: './img/girls/Vonnie.png'
+  },
+  {
+  name: 'Yam',
+  picture: './img/girls/Yam.png'
+  },
 ]
 
 let turno = 0;
