@@ -122,13 +122,13 @@ $(document).on('click', '.button', function (event) {
     $('#message').html('¡No, esa no era!')
     turno++;
   }
-  $('#picture').attr('src', girlsShuffled[turno].picture);
   setTimeout(function() {
     $('#turno').html(turno)
     $('#matches').html(matches)
     currentNames = generateOptions(turno, 3, girls.length)
     $(clicked).removeClass('match').removeClass('error')
     $('#message').html('')
+    $('#picture').attr('src', girlsShuffled[turno].picture);
     $('.button').each(function (i) {
       $(this).html(currentNames[i]) 
     })
