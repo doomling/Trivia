@@ -118,20 +118,20 @@ $(document).on('click', '.button', function (event) {
       matches++;
     });
   } else {
-    $(clicked).addClass('error')
+    $(clicked).addClass('match')
     $('#message').html('¡No, esa no era!')
     turno++;
+    matches++;
   }
-  $('#picture').attr('src', girlsShuffled[turno].picture);
   setTimeout(function() {
+    $('#picture').attr('src', girlsShuffled[turno].picture);
     $('#turno').html(turno)
     $('#matches').html(matches)
     currentNames = generateOptions(turno, 3, girls.length)
-    $(clicked).removeClass('match').removeClass('error')
+    $(clicked).removeClass('match')
     $('#message').html('')
     $('.button').each(function (i) {
       $(this).html(currentNames[i]) 
     })
   }, 700);
-  
 });
