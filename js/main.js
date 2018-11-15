@@ -166,6 +166,7 @@ $(document).on('click', '.button', function (event) {
     turno++;
   }
   setTimeout(function() {
+    checkTurns(turno, girlsShuffled.length, matches)
     $('#picture').attr('src', girlsShuffled[turno].picture);
     $('#turno').html(turno)
     $('#matches').html(matches)
@@ -176,4 +177,12 @@ $(document).on('click', '.button', function (event) {
       $(this).html(currentNames[i]) 
     })
   }, 700);
+  console.log(girlsShuffled.length)
 });
+
+function checkTurns (turns, girls, matches) {
+  if (turns == girls - 1) {
+    $('#modal').removeClass('hidden')
+    $('#final').html(matches)
+  }
+}

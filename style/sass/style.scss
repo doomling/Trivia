@@ -80,3 +80,29 @@ nav {
 .error, .error:hover {
     background: red;
 }
+
+.modal {
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    .inner-modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        height: 320px;
+        background-color: pink;
+        border: 3px solid #bf396a;
+    }
+}
+
+.hidden {
+    display: none;
+}
