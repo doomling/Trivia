@@ -118,7 +118,7 @@ $(document).on('click', '.button', function (event) {
       matches++;
     });
   } else {
-    $(clicked).addClass('match')
+    $(clicked).addClass('error')
     $('#message').html('¡No, esa no era!')
     turno++;
     matches++;
@@ -128,7 +128,7 @@ $(document).on('click', '.button', function (event) {
     $('#turno').html(turno)
     $('#matches').html(matches)
     currentNames = generateOptions(turno, 3, girls.length)
-    $(clicked).removeClass('match')
+    $(clicked).removeClass('match').removeClass('error')
     $('#message').html('')
     $('.button').each(function (i) {
       $(this).html(currentNames[i]) 
