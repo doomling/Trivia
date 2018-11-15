@@ -121,7 +121,6 @@ $(document).on('click', '.button', function (event) {
     $(clicked).addClass('error')
     $('#message').html('¡No, esa no era!')
     turno++;
-    matches++;
   }
   setTimeout(function() {
     $('#picture').attr('src', girlsShuffled[turno].picture);
