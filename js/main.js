@@ -122,7 +122,7 @@ $(document).on('click', '.button', function (event) {
       $('#message').html('')
       $('#picture').attr('src', girlsShuffled[turno].picture);
       $('.button').each(function (i) {
-      $(this).html(currentNames[i]) 
+        $(this).html(currentNames[i]) 
       })
     }, 700);
 
