@@ -62,6 +62,7 @@ nav {
     background-color: #bf396a;
     box-shadow: 0 5px 10px #999;
     color: white;
+    cursor: pointer;
 }
 
 .button:hover {background-color: #ea6495}
@@ -72,10 +73,10 @@ nav {
     transform: translateY(4px);
 }
 
-.match {
+.match, .match:hover {
     background: green;
 }
 
-.error {
+.error, .error:hover {
     background: red;
 }

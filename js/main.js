@@ -111,24 +111,27 @@ $(document).on('click', '.button', function (event) {
   const index = $(clicked).index();
 
   if (currentNames[index] === girlsShuffled[turno].name) {
-    $(clicked).addClass('match')
-    $('#message').html('¡Bien, acertaste!')
-    turno++;
-    
     setTimeout(function() {
-      $('#turno').html(turno)
-      currentNames = generateOptions(turno, 3, girls.length)
-      $(clicked).removeClass('match')
-      $('#message').html('')
-      $('#picture').attr('src', girlsShuffled[turno].picture);
-      $('.button').each(function (i) {
-        $(this).html(currentNames[i]) 
-      })
-    }, 700);
-
+      $(clicked).addClass('match')
+      $('#message').html('¡Bien, acertaste!')
+      turno++;
+      matches++;
+    });
   } else {
-    setTimeout(function() {
-    }, 2000);
+    $(clicked).addClass('error')
+    $('#message').html('¡No, esa no era!')
+    turno++;
   }
+  setTimeout(function() {
+    $('#turno').html(turno)
+    $('#matches').html(matches)
+    currentNames = generateOptions(turno, 3, girls.length)
+    $(clicked).removeClass('match').removeClass('error')
+    $('#message').html('')
+    $('#picture').attr('src', girlsShuffled[turno].picture);
+    $('.button').each(function (i) {
+      $(this).html(currentNames[i]) 
+    })
+  }, 700);
   console.log(currentNames)
 });
