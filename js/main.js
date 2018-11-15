@@ -111,21 +111,18 @@ $(document).on('click', '.button', function (event) {
   const index = $(clicked).index();
 
   if (currentNames[index] === girlsShuffled[turno].name) {
+    $(clicked).addClass('match')
+    $('#message').html('¡Bien, acertaste!')
+    turno++;
+    
     setTimeout(function() {
       $('#turno').html(turno)
-      $(clicked).addClass('match')
-      $('#message').html('¡Bien, acertaste!')
-      console.log(event.target)
-    }, 500);
-
-    setTimeout(function() {
-      turno++;
-      let currentNames = generateOptions(turno, 3, girls.length)
+      currentNames = generateOptions(turno, 3, girls.length)
       $(clicked).removeClass('match')
       $('#message').html('')
       $('#picture').attr('src', girlsShuffled[turno].picture);
       $('.button').each(function (i) {
-        $(this).html(currentNames[i]) 
+      $(this).html(currentNames[i]) 
       })
     }, 700);
 
@@ -133,6 +130,5 @@ $(document).on('click', '.button', function (event) {
     setTimeout(function() {
     }, 2000);
   }
-  console.log(clicked)
-  console.log(girlsShuffled[turno].name)
+  console.log(currentNames)
 });
