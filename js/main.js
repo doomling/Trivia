@@ -1,95 +1,95 @@
 const girls = [
   {
   name: 'Agos',
-  picture: './img/girls/Agos.png'
+  picture: './img/girls/Agos.jpg'
   },
   {
   name: 'Agus',
-  picture: './img/girls/agus.png'
+  picture: './img/girls/agus.jpg'
   },
   {
   name: 'Aldi L.',
-  picture: './img/girls/aldiL.png'
+  picture: './img/girls/aldiL.jpg'
   },
   {
   name: 'Bere',
-  picture: './img/girls/Bere.png'
+  picture: './img/girls/Bere.jpg'
   },
   {
   name: 'Cecilia',
-  picture: './img/girls/cecilia.png'
+  picture: './img/girls/cecilia.jpg'
   },
   {
   name: 'Euge',
-  picture: './img/girls/euge.png'
+  picture: './img/girls/euge.jpg'
   },
   {
   name: 'Flor',
-  picture: './img/girls/Flor.png'
+  picture: './img/girls/Flor.jpg'
   },
   {
   name: 'Grace',
-  picture: './img/girls/grace.png'
+  picture: './img/girls/grace.jpg'
   },
   {
   name: 'Maite',
-  picture: './img/girls/Maite.png'
+  picture: './img/girls/Maite.jpg'
   },
   {
   name: 'Maqui',
-  picture: './img/girls/Maqui.png'
+  picture: './img/girls/Maqui.jpg'
   },
   {
   name: 'Marce',
-  picture: './img/girls/Marce.png'
+  picture: './img/girls/Marce.jpg'
   },
   {
   name: 'Marianela',
-  picture: './img/girls/marianela.png'
+  picture: './img/girls/marianela.jpg'
   },
   {
   name: 'Meli',
-  picture: './img/girls/Meli.png'
+  picture: './img/girls/Meli.jpg'
   },
   {
   name: 'Mica',
-  picture: './img/girls/Mica.png'
+  picture: './img/girls/Mica.jpg'
   },
   {
   name: 'Michelle',
-  picture: './img/girls/Michelle.png'
+  picture: './img/girls/Michelle.jpg'
   },
   {
   name: 'Natalia',
-  picture: './img/girls/Natalia.png'
+  picture: './img/girls/Natalia.jpg'
   },
   {
   name: 'Noelia',
-  picture: './img/girls/Noelia.png'
+  picture: './img/girls/Noelia.jpg'
   },
   {
   name: 'Rocio',
-  picture: './img/girls/Rocio.png'
+  picture: './img/girls/Rocio.jpg'
   },
   {
   name: 'Rossita',
-  picture: './img/girls/Rossita.png'
+  picture: './img/girls/Rossita.jpg'
   },
   {
   name: 'Sofía',
-  picture: './img/girls/Sofia.png'
+  picture: './img/girls/Sofia.jpg'
   },
   {
   name: 'Vicky',
-  picture: './img/girls/Vicky.png'
+  picture: './img/girls/Vicky.jpg'
   },
   {
   name: 'Vonnie',
-  picture: './img/girls/Vonnie.png'
+  picture: './img/girls/Vonnie.jpg'
   },
   {
   name: 'Yam',
-  picture: './img/girls/Yam.png'
+  picture: './img/girls/Yam.jpg'
   },
 ]
 
